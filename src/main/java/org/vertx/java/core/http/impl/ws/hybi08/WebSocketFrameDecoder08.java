@@ -96,8 +96,16 @@ public class WebSocketFrameDecoder08 extends ReplayingDecoder<VoidEnum> {
 
     FrameType frameType = decodeFrameType(opcode);
 
+    int cap = this.internalBuffer().capacity();
+    if (cap > max) {
+      System.out.println("max buffer size is " + cap);
+      max = cap;
+    }
+
     return new DefaultWebSocketFrame(frameType, data);
   }
+
+  int max = 0;
 
   protected FrameType decodeFrameType(int opcode) {
     switch (opcode) {

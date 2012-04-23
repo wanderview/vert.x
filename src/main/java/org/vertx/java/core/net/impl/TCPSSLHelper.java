@@ -16,6 +16,7 @@
 
 package org.vertx.java.core.net.impl;
 
+import org.jboss.netty.channel.FixedReceiveBufferSizePredictor;
 import org.jboss.netty.channel.socket.nio.NioSocketChannel;
 import org.vertx.java.core.file.impl.PathAdjuster;
 import org.vertx.java.core.impl.Context;
@@ -98,7 +99,9 @@ public class TCPSSLHelper {
       options.put("child.sendBufferSize", tcpSendBufferSize);
     }
     if (tcpReceiveBufferSize != null) {
+      System.out.println("Setting receive buffer size to " + tcpReceiveBufferSize);
       options.put("child.receiveBufferSize", tcpReceiveBufferSize);
+      options.put("child.receiveBufferSizePredictor", new FixedReceiveBufferSizePredictor(1024));
     }
     if (reuseAddress != null) {
       options.put("reuseAddress", reuseAddress);
