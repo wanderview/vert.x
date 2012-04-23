@@ -92,7 +92,7 @@ public class TCPSSLHelper {
 
   public Map<String, Object> generateConnectionOptions(boolean server) {
     Map<String, Object> options = new HashMap<>();
-    String prefix = (server ? "" : "child.");
+    String prefix = (server ? "child." : "");
     if (tcpNoDelay != null) {
       options.put(prefix +"tcpNoDelay", tcpNoDelay);
     }
