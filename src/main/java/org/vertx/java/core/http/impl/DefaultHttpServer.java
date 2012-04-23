@@ -164,7 +164,7 @@ public class DefaultHttpServer implements HttpServer {
                 vertx.getAcceptorPool(),
                 availableWorkers);
         ServerBootstrap bootstrap = new ServerBootstrap(factory);
-        bootstrap.setOptions(tcpHelper.generateConnectionOptions());
+        bootstrap.setOptions(tcpHelper.generateConnectionOptions(true));
 
         tcpHelper.checkSSL();
 

@@ -40,7 +40,7 @@ public class WebsocketsTestClient extends TestClientBase {
   @Override
   public void start() {
     super.start();
-    client = vertx.createHttpClient().setHost("localhost").setPort(8080);
+    client = vertx.createHttpClient().setHost("localhost").setPort(8080).setReceiveBufferSize(1024);
     tu.appReady();
   }
 
@@ -111,7 +111,7 @@ public class WebsocketsTestClient extends TestClientBase {
 
     final String path = "/some/path";
 
-    server = vertx.createHttpServer().setReceiveBufferSize(1024).websocketHandler(new Handler<ServerWebSocket>() {
+    server = vertx.createHttpServer().setReceiveBufferSize(1 * 1024).websocketHandler(new Handler<ServerWebSocket>() {
       public void handle(final ServerWebSocket ws) {
         tu.checkContext();
         tu.azzert(path.equals(ws.path));
