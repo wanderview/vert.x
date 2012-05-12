@@ -81,9 +81,19 @@ public class PerfClient extends Verticle implements Handler<HttpClientResponse> 
               min = Math.min(min, d);
               max = Math.max(max, d);
             }
+            double mean = sum / (double)NUM_DELTAS;
+
+            double sumsq_diff = 0;
+            for(long d : deltas) {
+              double diff = (double)d - mean;
+              sumsq_diff += diff*diff;
+            }
+            double stdev = Math.sqrt(sumsq_diff / (double)NUM_DELTAS);
+
             eb.send("delta-min", min);
             eb.send("delta-max", max);
-            eb.send("delta-avg", sum/(double)NUM_DELTAS);
+            eb.send("delta-avg", mean);
+            eb.send("delta-stdev", stdev);
           }
 
           count = 0;
