@@ -23,6 +23,9 @@ import org.vertx.java.core.http.HttpClient;
 import org.vertx.java.core.http.HttpClientResponse;
 import org.vertx.java.deploy.Verticle;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class PerfClient extends Verticle implements Handler<HttpClientResponse> {
 
   private HttpClient client;
@@ -41,15 +44,48 @@ public class PerfClient extends Verticle implements Handler<HttpClientResponse> 
 
   private EventBus eb;
 
+  private final Deque<Long> startTimeMs = new ArrayDeque<Long>();
+
+  private static final int NUM_DELTAS = 10000;
+  private final long[] deltas = new long[NUM_DELTAS];
+  private int nextDelta = 0;
+  boolean deltasFull = false;
+
   public void handle(HttpClientResponse response) {
     if (response.statusCode != 200) {
       throw new IllegalStateException("Invalid response");
     }
     response.endHandler(new SimpleHandler() {
       public void handle() {
+        long start = startTimeMs.remove();
+        long now = System.currentTimeMillis();
+        long delta = now - start;;
+
+        deltas[nextDelta] = delta;
+        nextDelta += 1;
+        if(nextDelta >= NUM_DELTAS) {
+          nextDelta = 0;
+          deltasFull = true;
+        }
+
         count++;
         if (count % 2000 == 0) {
           eb.send("rate-counter", count);
+
+          if(deltasFull) {
+            long min = Long.MAX_VALUE;
+            long max = Long.MIN_VALUE;
+            double sum = 0;
+            for(long d : deltas) {
+              sum += d;
+              min = Math.min(min, d);
+              max = Math.max(max, d);
+            }
+            eb.send("delta-min", min);
+            eb.send("delta-max", max);
+            eb.send("delta-avg", sum/(double)NUM_DELTAS);
+          }
+
           count = 0;
         }
         requestCredits++;
@@ -69,6 +105,7 @@ public class PerfClient extends Verticle implements Handler<HttpClientResponse> 
       start = System.currentTimeMillis();
     }
     while (requestCredits > 0) {
+      startTimeMs.add(System.currentTimeMillis());
       client.getNow("/", this);
       requestCredits--;
     }

@@ -30,6 +30,10 @@ public class RateCounter extends Verticle implements Handler<Message<Integer>> {
 
   private long totCount;
 
+  private long minDeltaMs = -1;
+  private long maxDeltaMs = -1;
+  private double avgDeltaMs = -1;
+
   public void handle(Message<Integer> msg) {
     if (last == 0) {
       last = start = System.currentTimeMillis();
@@ -40,6 +44,21 @@ public class RateCounter extends Verticle implements Handler<Message<Integer>> {
 
   public void start() {
     vertx.eventBus().registerHandler("rate-counter", this);
+    vertx.eventBus().registerHandler("delta-min", new Handler<Message<Long>>() {
+      public void handle(Message<Long> msg) {
+        minDeltaMs = msg.body;
+      }
+    });
+    vertx.eventBus().registerHandler("delta-max", new Handler<Message<Long>>() {
+      public void handle(Message<Long> msg) {
+        maxDeltaMs = msg.body;
+      }
+    });
+    vertx.eventBus().registerHandler("delta-avg", new Handler<Message<Double>>() {
+      public void handle(Message<Double> msg) {
+        avgDeltaMs = msg.body;
+      }
+    });
     vertx.setPeriodic(3000, new Handler<Long>() {
       public void handle(Long id) {
         if (last != 0) {
@@ -47,7 +66,8 @@ public class RateCounter extends Verticle implements Handler<Message<Integer>> {
           double rate = 1000 * (double)count / (now - last);
           double avRate = 1000 * (double)totCount / (now - start);
           count = 0;
-          System.out.println((now - start) + " Rate: count/sec: " + rate + " Average rate: " + avRate);
+          System.out.println((now - start) + " Rate: count/sec: " + rate + " Average rate: " + avRate +
+            " Min Delta (ms): " + minDeltaMs + " Max Delta (ms): " + maxDeltaMs + " Avg Delta (ms): " + avgDeltaMs);
           last = now;
         }
       }
