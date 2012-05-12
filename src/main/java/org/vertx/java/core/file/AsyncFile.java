@@ -33,7 +33,7 @@ import org.vertx.java.core.streams.WriteStream;
  */
 public interface AsyncFile {
 
-  public static final int BUFFER_SIZE = 8192;
+  public static final int BUFFER_SIZE = 40960;
 
   /**
    * Close the file. The actual close happens asynchronously.
