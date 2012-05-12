@@ -1,0 +1,1432 @@
+[pid 19782] open("httpperf/foo.html", O_RDWR|O_CREAT, 0666) = 43
+[pid 19782] open("httpperf/foo.html", O_RDWR|O_CREAT, 0666) = 44
+[pid 19782] futex(0x7f8c040ef2ac, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19708] <... epoll_ctl resumed> )   = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_ADD, 36, {EPOLLIN, {u32=36, u64=36}}) = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_ADD, 37, {EPOLLIN, {u32=37, u64=37}}) = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_ADD, 38, {EPOLLIN, {u32=38, u64=38}}) = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_ADD, 39, {EPOLLIN, {u32=39, u64=15459325866705682471}}) = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_ADD, 40, {EPOLLIN, {u32=40, u64=15459326004144635944}}) = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_ADD, 41, {EPOLLIN, {u32=41, u64=41}}) = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_DEL, 33, {0, {u32=33, u64=2409025544050966561}}) = 0
+[pid 19708] epoll_wait(25, {{EPOLLIN, {u32=23, u64=23}}, {EPOLLIN, {u32=34, u64=34}}, {EPOLLIN, {u32=36, u64=36}}, {EPOLLIN, {u32=37, u64=37}}, {EPOLLIN, {u32=38, u64=38}}, {EPOLLIN, {u32=39, u64=15459325866705682471}}, {EPOLLIN, {u32=40, u64=15459326004144635944}}, {EPOLLIN, {u32=41, u64=41}}}, 8192, 10) = 8
+[pid 19708] read(23, "\1", 128)         = 1
+[pid 19708] futex(0x7f8c28097854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28097850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19699] mprotect(0x7f8c2e3ac000, 4096, PROT_READ) = 0
+[pid 19699] mprotect(0x7f8c2e3ac000, 4096, PROT_READ|PROT_WRITE) = 0
+[pid 19699] mprotect(0x7f8c2e3ad000, 4096, PROT_NONE) = 0
+[pid 19699] futex(0x7f8c28097854, FUTEX_WAIT_PRIVATE, 59, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c28097854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28097850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19699] mprotect(0x7f8c2e3ad000, 4096, PROT_READ) = 0
+[pid 19699] futex(0x7f8c28097854, FUTEX_WAIT_PRIVATE, 61, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c28097854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28097850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19699] futex(0x7f8c28097854, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 63, {1336777360, 480690000}, ffffffff <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/vertx/java/core/file/impl/DefaultAsyncFile$2.class", 0x7f8c216e7ff0) = -1 ENOENT (No such file or directory)
+[pid 19708] lseek(11, 252629, SEEK_SET) = 252629
+[pid 19708] read(11, "PK\3\4\n\0\0\10\10\0\370m\253@\306[\242\213L\5\0\0005\r\0\0006\0\0\0", 30) = 30
+[pid 19708] lseek(11, 252713, SEEK_SET) = 252713
+[pid 19708] read(11, "\235WYo\33U\30=7v2\2513Y\232\266Y\32\332$m\22l\7j7\335\200\226B\227\224"..., 1356) = 1356
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/vertx/java/examples/httpperf/PerfServer$1$1$1.class", 0x7f8c216e7f00) = -1 ENOENT (No such file or directory)
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/lib/ruby/org/vertx/java/examples/httpperf/PerfServer$1$1$1.class", 0x7f8c216e7f00) = -1 ENOENT (No such file or directory)
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/lib/javascript/org/vertx/java/examples/httpperf/PerfServer$1$1$1.class", 0x7f8c216e7f00) = -1 ENOENT (No such file or directory)
+[pid 19708] stat("/home/bkelly/git/vert.x/src/examples/java/classes/org/vertx/java/examples/httpperf/PerfServer$1$1$1.class", {st_mode=S_IFREG|0664, st_size=1469, ...}) = 0
+[pid 19708] open("/home/bkelly/git/vert.x/src/examples/java/classes/org/vertx/java/examples/httpperf/PerfServer$1$1$1.class", O_RDONLY) = 45
+[pid 19708] fstat(45, {st_mode=S_IFREG|0664, st_size=1469, ...}) = 0
+[pid 19708] fcntl(45, F_GETFD)          = 0
+[pid 19708] fcntl(45, F_SETFD, FD_CLOEXEC) = 0
+[pid 19708] stat("/home/bkelly/git/vert.x/src/examples/java/classes/org/vertx/java/examples/httpperf/PerfServer$1$1$1.class", {st_mode=S_IFREG|0664, st_size=1469, ...}) = 0
+[pid 19708] read(45, "\312\376\272\276\0\0\0003\0;\t\0\10\0$\n\0\t\0%\t\0\f\0&\t\0'\0(\n\0"..., 1024) = 1024
+[pid 19708] read(45, "onse;\1\0+org/vertx/java/core/http"..., 445) = 445
+[pid 19708] close(45)                   = 0
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/vertx/java/core/file/impl/DefaultAsyncFile$2$1.class", 0x7f8c216e7f60) = -1 ENOENT (No such file or directory)
+[pid 19708] lseek(11, 251661, SEEK_SET) = 251661
+[pid 19708] read(11, "PK\3\4\n\0\0\10\10\0\370m\253@~1\0376r\3\0\0\245\7\0\0008\0\0\0", 30) = 30
+[pid 19708] lseek(11, 251747, SEEK_SET) = 251747
+[pid 19708] read(11, "\225UkO\33W\20=\327\270\336\356\262\200\241y\220&)P\\jL\302\2!\2176\204\204gq"..., 882) = 882
+[pid 19707] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 19707] futex(0x7f8c281d7f28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19707] futex(0x7f8c281d7f54, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336777359, 505626000}, ffffffff <unfinished ...>
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/vertx/java/core/file/impl/DefaultAsyncFile$5.class", 0x7f8c216e7e60) = -1 ENOENT (No such file or directory)
+[pid 19708] lseek(11, 258639, SEEK_SET) = 258639
+[pid 19708] read(11, "PK\3\4\n\0\0\10\10\0\370m\253@\r\\\357\374\342\4\0\0@\f\0\0006\0\0\0", 30) = 30
+[pid 19708] lseek(11, 258723, SEEK_SET) = 258723
+[pid 19708] read(11, "\275VmS\23W\24~n\22\262\260\256\202PT\254U\212\210\260(\1\324\276Imy\361%\26\260"..., 1250) = 1250
+[pid 19708] lseek(3, 48015300, SEEK_SET) = 48015300
+[pid 19708] read(3, "PK\3\4\n\0\0\10\0\0\330\0\215@\270~\f\vM\n\0\0M\n\0\0004\0\0\0", 30) = 30
+[pid 19708] lseek(3, 48015382, SEEK_SET) = 48015382
+[pid 19708] read(3, "\312\376\272\276\0\0\0003\0}\t\0\27\0A\t\0\27\0B\t\0\27\0C\t\0\27\0D\t\0"..., 2637) = 2637
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c212e7000
+[pid 19708] clone(Process 19783 attached
+child_stack=0x7f8c213e6ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c213e79d0, tls=0x7f8c213e7700, child_tidptr=0x7f8c213e79d0) = 19783
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 55, NULL <unfinished ...>
+[pid 19783] set_robust_list(0x7f8c213e79e0, 0x18) = 0
+[pid 19783] gettid()                    = 19783
+[pid 19783] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19783] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19783] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19783] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19783] <... futex resumed> )       = 1
+[pid 19783] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/vertx/java/examples/httpperf/PerfServer$1$1$2.class", 0x7f8c216e7f00) = -1 ENOENT (No such file or directory)
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/lib/ruby/org/vertx/java/examples/httpperf/PerfServer$1$1$2.class", 0x7f8c216e7f00) = -1 ENOENT (No such file or directory)
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/lib/javascript/org/vertx/java/examples/httpperf/PerfServer$1$1$2.class", 0x7f8c216e7f00) = -1 ENOENT (No such file or directory)
+[pid 19708] stat("/home/bkelly/git/vert.x/src/examples/java/classes/org/vertx/java/examples/httpperf/PerfServer$1$1$2.class", {st_mode=S_IFREG|0664, st_size=1482, ...}) = 0
+[pid 19708] open("/home/bkelly/git/vert.x/src/examples/java/classes/org/vertx/java/examples/httpperf/PerfServer$1$1$2.class", O_RDONLY) = 45
+[pid 19708] fstat(45, {st_mode=S_IFREG|0664, st_size=1482, ...}) = 0
+[pid 19708] fcntl(45, F_GETFD)          = 0
+[pid 19708] fcntl(45, F_SETFD, FD_CLOEXEC) = 0
+[pid 19708] stat("/home/bkelly/git/vert.x/src/examples/java/classes/org/vertx/java/examples/httpperf/PerfServer$1$1$2.class", {st_mode=S_IFREG|0664, st_size=1482, ...}) = 0
+[pid 19708] read(45, "\312\376\272\276\0\0\0003\0C\t\0\n\0(\t\0\n\0)\n\0\v\0*\v\0+\0,\t\0"..., 1024) = 1024
+[pid 19708] read(45, "http/HttpServerRequest\1\0\10respons"..., 458) = 458
+[pid 19708] close(45)                   = 0
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c211e6000
+[pid 19708] clone(Process 19784 attached
+child_stack=0x7f8c212e5ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c212e69d0, tls=0x7f8c212e6700, child_tidptr=0x7f8c212e69d0) = 19784
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 57, NULL <unfinished ...>
+[pid 19783] <... futex resumed> )       = 1
+[pid 19783] sched_getaffinity(19783, 32, {1, 0, 0, 0}) = 32
+[pid 19783] sched_getaffinity(19783, 32, {1, 0, 0, 0}) = 32
+[pid 19783] mmap(0x7f8c212e7000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c212e7000
+[pid 19783] mprotect(0x7f8c212e7000, 12288, PROT_NONE) = 0
+[pid 19783] lseek(3, 48148241, SEEK_SET) = 48148241
+[pid 19783] read(3, "PK\3\4\n\0\0\10\0\0\327\0\215@QN\10\310\362\7\0\0\362\7\0\0!\0\0\0", 30) = 30
+[pid 19783] lseek(3, 48148304, SEEK_SET) = 48148304
+[pid 19783] read(3, "\312\376\272\276\0\0\0003\0O\n\0\20\0007\7\0008\t\0\17\0009\t\0\17\0:\t\0\17\0"..., 2034) = 2034
+[pid 19783] pread(42, "<html>\n<head>\n  <title>Some page"..., 8192, 0) = 87
+[pid 19783] lseek(3, 47806282, SEEK_SET) = 47806282
+[pid 19783] read(3, "PK\3\4\n\0\0\10\0\0\330\0\215@\270#\366\227\314\33\0\0\314\33\0\0\30\0\0\0", 30) = 30
+[pid 19783] lseek(3, 47806336, SEEK_SET) = 47806336
+[pid 19783] read(3, "\312\376\272\276\0\0\0003\0\343\t\0(\0\206\n\0002\0\207\7\0\210\n\0\3\0\211\n\0\212\0"..., 7116) = 7116
+[pid 19783] lseek(3, 47801750, SEEK_SET) = 47801750
+[pid 19783] read(3, "PK\3\4\n\0\0\10\0\0\330\0\215@1\330h\230\341\2\0\0\341\2\0\0\32\0\0\0", 30) = 30
+[pid 19783] lseek(3, 47801806, SEEK_SET) = 47801806
+[pid 19783] read(3, "\312\376\272\276\0\0\0003\0\37\n\0\4\0\31\n\0\3\0\32\7\0\33\7\0\34\1\0\6<in"..., 737) = 737
+[pid 19783] futex(0x7f8c040f8754, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19784] set_robust_list(0x7f8c212e69e0, 0x18) = 0
+[pid 19784] gettid()                    = 19784
+[pid 19784] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19784] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19784] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19784] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19784] <... futex resumed> )       = 1
+[pid 19784] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] futex(0x7f8c040f8754, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c040f8750, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c210e5000
+[pid 19708] clone(Process 19785 attached
+child_stack=0x7f8c211e4ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c211e59d0, tls=0x7f8c211e5700, child_tidptr=0x7f8c211e59d0) = 19785
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 59, NULL <unfinished ...>
+[pid 19783] <... futex resumed> )       = 0
+[pid 19783] futex(0x7f8c040f8728, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19783] futex(0x7f8c040f8754, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19784] <... futex resumed> )       = 1
+[pid 19784] sched_getaffinity(19784, 32, {1, 0, 0, 0}) = 32
+[pid 19784] sched_getaffinity(19784, 32, {1, 0, 0, 0}) = 32
+[pid 19784] mmap(0x7f8c211e6000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c211e6000
+[pid 19784] mprotect(0x7f8c211e6000, 12288, PROT_NONE) = 0
+[pid 19784] pread(43, "<html>\n<head>\n  <title>Some page"..., 8192, 0) = 87
+[pid 19784] futex(0x7f8c040d3a54, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19785] set_robust_list(0x7f8c211e59e0, 0x18) = 0
+[pid 19785] gettid()                    = 19785
+[pid 19785] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19785] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19785] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19785] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19785] <... futex resumed> )       = 1
+[pid 19785] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] futex(0x7f8c040f8754, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c040f8750, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19708] read(38, "GET / HTTP/1.1\r\nHost: localhost:"..., 1024) = 1024
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c20fe4000
+[pid 19708] clone(Process 19786 attached
+child_stack=0x7f8c210e3ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c210e49d0, tls=0x7f8c210e4700, child_tidptr=0x7f8c210e49d0) = 19786
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 61, NULL <unfinished ...>
+[pid 19783] <... futex resumed> )       = 0
+[pid 19783] futex(0x7f8c040f8728, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19783] futex(0x7f8c040f8754, FUTEX_WAIT_PRIVATE, 5, NULL <unfinished ...>
+[pid 19785] <... futex resumed> )       = 1
+[pid 19785] sched_getaffinity(19785, 32, {1, 0, 0, 0}) = 32
+[pid 19785] sched_getaffinity(19785, 32, {1, 0, 0, 0}) = 32
+[pid 19785] mmap(0x7f8c210e5000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c210e5000
+[pid 19785] mprotect(0x7f8c210e5000, 12288, PROT_NONE) = 0
+[pid 19785] pread(44, "<html>\n<head>\n  <title>Some page"..., 8192, 0) = 87
+[pid 19785] futex(0x7f8c0402a054, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19786] set_robust_list(0x7f8c210e49e0, 0x18) = 0
+[pid 19786] gettid()                    = 19786
+[pid 19786] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19786] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19786] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19786] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19786] <... futex resumed> )       = 1
+[pid 19786] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] futex(0x7f8c040f8754, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c040f8750, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19708] write(24, "\1", 1)          = 1
+[pid 19708] futex(0x7f8c280fdd54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fdd50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19704] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fdd28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c280fdd28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19704] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fdd28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19704] futex(0x7f8c280fba54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fba50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19703] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19704] <... futex resumed> )       = 0
+[pid 19703] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19707] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19707] futex(0x7f8c281d7f28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19703] <... futex resumed> )       = 0
+[pid 19707] <... futex resumed> )       = 0
+[pid 19703] futex(0x7f8c280fba54, FUTEX_WAIT_PRIVATE, 47, NULL <unfinished ...>
+[pid 19707] futex(0x7f8c281d7f54, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336777359, 525870000}, ffffffff <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19783] <... futex resumed> )       = 0
+[pid 19783] futex(0x7f8c040f8728, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19783] futex(0x7f8c0402a054, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c0402a050, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19783] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+[pid 19706] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 19706] futex(0x7f8c2810b128, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19706] futex(0x7f8c2810b154, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336777359, 559532000}, ffffffff <unfinished ...>
+[pid 19783] <... mmap resumed> )        = 0x7f8c20ee3000
+[pid 19783] clone(Process 19787 attached
+child_stack=0x7f8c20fe2ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c20fe39d0, tls=0x7f8c20fe3700, child_tidptr=0x7f8c20fe39d0) = 19787
+[pid 19708] futex(0x7f8c280fba54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fba50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19783] futex(0x7f8c040f8754, FUTEX_WAIT_PRIVATE, 7, NULL <unfinished ...>
+[pid 19703] <... futex resumed> )       = 0
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19703] <... futex resumed> )       = 0
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] read(39, "GET / HTTP/1.1\r\nHost: localhost:"..., 1024) = 1024
+[pid 19785] <... futex resumed> )       = 0
+[pid 19785] futex(0x7f8c0402a028, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19785] futex(0x7f8c0402a054, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19704] futex(0x7f8c280fdd54, FUTEX_WAIT_PRIVATE, 47, NULL <unfinished ...>
+[pid 19703] futex(0x7f8c280fba54, FUTEX_WAIT_PRIVATE, 49, NULL <unfinished ...>
+[pid 19786] <... futex resumed> )       = 1
+[pid 19786] sched_getaffinity(19786, 32, {1, 0, 0, 0}) = 32
+[pid 19786] sched_getaffinity(19786, 32, {1, 0, 0, 0}) = 32
+[pid 19786] mmap(0x7f8c20fe4000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c20fe4000
+[pid 19786] mprotect(0x7f8c20fe4000, 12288, PROT_NONE) = 0
+[pid 19786] open("httpperf/foo.html", O_RDWR|O_CREAT, 0666) = 45
+[pid 19786] open("httpperf/foo.html", O_RDWR|O_CREAT, 0666) = 46
+[pid 19786] futex(0x7f8c0402bd5c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19708] read(40,  <unfinished ...>
+[pid 19787] set_robust_list(0x7f8c20fe39e0, 0x18) = 0
+[pid 19787] gettid()                    = 19787
+[pid 19787] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19787] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19787] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19787] futex(0x7f8c040f8754, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c040f8750, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19783] <... futex resumed> )       = 0
+[pid 19783] futex(0x7f8c040f8728, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19707] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 19707] futex(0x7f8c281d7f28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19707] futex(0x7f8c281d7f54, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336777359, 545058000}, ffffffff <unfinished ...>
+[pid 19787] <... futex resumed> )       = 1
+[pid 19787] futex(0x7f8c040f8728, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19783] <... futex resumed> )       = 0
+[pid 19783] futex(0x7f8c040f8728, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19783] futex(0x7f8c0402a054, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c0402a050, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19783] futex(0x7f8c040f8b5c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19785] <... futex resumed> )       = 0
+[pid 19785] futex(0x7f8c0402a028, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19785] futex(0x7f8c040d3a54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c040d3a50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19784] <... futex resumed> )       = 0
+[pid 19784] futex(0x7f8c040d3a28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19785] futex(0x7f8c040d3a28, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 19784] <... futex resumed> )       = 0
+[pid 19784] futex(0x7f8c040d3a28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19784] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c20de2000
+[pid 19784] clone(Process 19788 attached
+child_stack=0x7f8c20ee1ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c20ee29d0, tls=0x7f8c20ee2700, child_tidptr=0x7f8c20ee29d0) = 19788
+[pid 19784] futex(0x7f8c040d3a54, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19785] futex(0x7f8c0402a054, FUTEX_WAIT_PRIVATE, 5, NULL <unfinished ...>
+[pid 19787] <... futex resumed> )       = 1
+[pid 19787] sched_getaffinity(19787, 32, {1, 0, 0, 0}) = 32
+[pid 19787] sched_getaffinity(19787, 32, {1, 0, 0, 0}) = 32
+[pid 19787] mmap(0x7f8c20ee3000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c20ee3000
+[pid 19787] mprotect(0x7f8c20ee3000, 12288, PROT_NONE) = 0
+[pid 19787] futex(0x7f8c28097854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28097850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19787] <... futex resumed> )       = 1
+[pid 19787] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19699] futex(0x7f8c28097854, FUTEX_WAIT_PRIVATE, 65, NULL <unfinished ...>
+[pid 19787] <... futex resumed> )       = 1
+[pid 19787] futex(0x7f8c1400a754, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19788] set_robust_list(0x7f8c20ee29e0, 0x18) = 0
+[pid 19788] gettid()                    = 19788
+[pid 19788] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19788] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19788] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19788] futex(0x7f8c040d3a54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c040d3a50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19784] <... futex resumed> )       = 0
+[pid 19784] futex(0x7f8c040d3a28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19788] <... futex resumed> )       = 1
+[pid 19788] futex(0x7f8c040d3a28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19784] <... futex resumed> )       = 0
+[pid 19784] futex(0x7f8c040d3a28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19784] futex(0x7f8c28097854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28097850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19699] <... futex resumed> )       = 0
+[pid 19784] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19784] <... futex resumed> )       = 0
+[pid 19699] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19784] futex(0x7f8c040d3f0c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19699] mprotect(0x7f8c2e3ac000, 4096, PROT_READ) = 0
+[pid 19699] mprotect(0x7f8c2e3ac000, 4096, PROT_READ|PROT_WRITE) = 0
+[pid 19699] mprotect(0x7f8c2e3ad000, 4096, PROT_NONE) = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19788] <... futex resumed> )       = 1
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19788] sched_getaffinity(19788, 32,  <unfinished ...>
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19788] <... sched_getaffinity resumed> {1, 0, 0, 0}) = 32
+[pid 19708] <... read resumed> "GET / HTTP/1.1\r\nHost: localhost:"..., 1024) = 1024
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19788] sched_getaffinity(19788, 32,  <unfinished ...>
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 63, NULL <unfinished ...>
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19788] <... sched_getaffinity resumed> {1, 0, 0, 0}) = 32
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19788] mmap(0x7f8c20de2000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19788] <... mmap resumed> )        = 0x7f8c20de2000
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19788] mprotect(0x7f8c20de2000, 12288, PROT_NONE <unfinished ...>
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19788] <... mprotect resumed> )    = 0
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19788] futex(0x7f8c1c013b54, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19699] sched_yield()               = 0
+[pid 19699] mprotect(0x7f8c2e3ad000, 4096, PROT_READ) = 0
+[pid 19699] futex(0x7f8c0402a054, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c0402a050, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19785] <... futex resumed> )       = 0
+[pid 19785] futex(0x7f8c0402a028, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19699] <... futex resumed> )       = 1
+[pid 19699] futex(0x7f8c0402a028, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19785] <... futex resumed> )       = 0
+[pid 19785] futex(0x7f8c0402a028, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19785] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c20ce1000
+[pid 19785] clone(Process 19789 attached
+child_stack=0x7f8c20de0ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c20de19d0, tls=0x7f8c20de1700, child_tidptr=0x7f8c20de19d0) = 19789
+[pid 19785] futex(0x7f8c0402a054, FUTEX_WAIT_PRIVATE, 7, NULL <unfinished ...>
+[pid 19699] <... futex resumed> )       = 1
+[pid 19699] futex(0x7f8c1400a754, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c1400a750, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19787] <... futex resumed> )       = 0
+[pid 19787] futex(0x7f8c1400a728, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19699] <... futex resumed> )       = 1
+[pid 19699] futex(0x7f8c1400a728, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19787] <... futex resumed> )       = 0
+[pid 19787] futex(0x7f8c1400a728, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19787] pread(42, "", 8105, 87)     = 0
+[pid 19787] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/vertx/java/core/file/impl/DefaultAsyncFile$5$1.class",  <unfinished ...>
+[pid 19699] <... futex resumed> )       = 1
+[pid 19787] <... stat resumed> 0x7f8c20fe1160) = -1 ENOENT (No such file or directory)
+[pid 19699] futex(0x7f8c28097854, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 67, {1336777360, 537058000}, ffffffff <unfinished ...>
+[pid 19787] lseek(11, 257322, SEEK_SET) = 257322
+[pid 19787] read(11, "PK\3\4\n\0\0\10\10\0\370m\253@\231\211\330\tg\2\0\0\30\5\0\0008\0\0\0", 30) = 30
+[pid 19787] lseek(11, 257408, SEEK_SET) = 257408
+[pid 19787] read(11, "\225T\213N\23A\24=\323V\226n\7ix\370D\1\251\330\26e)\26_E\220\2F\222\252\t"..., 615) = 615
+[pid 19787] futex(0x7f8c1400954c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19789] set_robust_list(0x7f8c20de19e0, 0x18) = 0
+[pid 19789] gettid()                    = 19789
+[pid 19789] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19789] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19789] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19789] futex(0x7f8c0402a054, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c0402a050, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19785] <... futex resumed> )       = 0
+[pid 19785] futex(0x7f8c0402a028, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19789] <... futex resumed> )       = 1
+[pid 19789] futex(0x7f8c0402a028, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19785] <... futex resumed> )       = 0
+[pid 19785] futex(0x7f8c0402a028, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19785] futex(0x7f8c1c013b54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c1c013b50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19788] <... futex resumed> )       = 0
+[pid 19788] futex(0x7f8c1c013b28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19785] <... futex resumed> )       = 1
+[pid 19785] futex(0x7f8c1c013b28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19788] <... futex resumed> )       = 0
+[pid 19788] futex(0x7f8c1c013b28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19788] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19788] futex(0x7f8c28097854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28097850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19788] futex(0x7f8c1c013b54, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19785] <... futex resumed> )       = 1
+[pid 19785] futex(0x7f8c0402a4ac, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c20be0000
+[pid 19708] clone(Process 19790 attached
+child_stack=0x7f8c20cdfff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c20ce09d0, tls=0x7f8c20ce0700, child_tidptr=0x7f8c20ce09d0) = 19790
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 65, NULL <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19699] futex(0x7f8c28097854, FUTEX_WAIT_PRIVATE, 69, NULL <unfinished ...>
+[pid 19789] <... futex resumed> )       = 1
+[pid 19789] sched_getaffinity(19789, 32, {1, 0, 0, 0}) = 32
+[pid 19789] sched_getaffinity(19789, 32, {1, 0, 0, 0}) = 32
+[pid 19789] mmap(0x7f8c20ce1000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c20ce1000
+[pid 19789] mprotect(0x7f8c20ce1000, 12288, PROT_NONE) = 0
+[pid 19789] futex(0x7f8c28060854, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19790] set_robust_list(0x7f8c20ce09e0, 0x18) = 0
+[pid 19790] gettid()                    = 19790
+[pid 19790] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19790] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19790] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19790] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19790] <... futex resumed> )       = 1
+[pid 19790] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] futex(0x7f8c28097854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28097850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19708] read(41,  <unfinished ...>
+[pid 19707] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 19707] futex(0x7f8c281d7f28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19707] futex(0x7f8c281d7f54, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336777359, 565123000}, ffffffff <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19699] mprotect(0x7f8c2e3ac000, 4096, PROT_READ) = 0
+[pid 19699] mprotect(0x7f8c2e3ac000, 4096, PROT_READ|PROT_WRITE) = 0
+[pid 19699] mprotect(0x7f8c2e3ad000, 4096, PROT_NONE) = 0
+[pid 19708] <... read resumed> "GET / HTTP/1.1\r\nHost: localhost:"..., 1024) = 1024
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 67, NULL <unfinished ...>
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19790] <... futex resumed> )       = 1
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19790] sched_getaffinity(19790, 32,  <unfinished ...>
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19790] <... sched_getaffinity resumed> {1, 0, 0, 0}) = 32
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19790] sched_getaffinity(19790, 32,  <unfinished ...>
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19790] <... sched_getaffinity resumed> {1, 0, 0, 0}) = 32
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19790] mmap(0x7f8c20be0000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19790] <... mmap resumed> )        = 0x7f8c20be0000
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19790] mprotect(0x7f8c20be0000, 12288, PROT_NONE <unfinished ...>
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19790] <... mprotect resumed> )    = 0
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19790] futex(0x7f8c0402e854, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19699] sched_yield()               = 0
+[pid 19699] mprotect(0x7f8c2e3ad000, 4096, PROT_READ) = 0
+[pid 19699] futex(0x7f8c0402e854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c0402e850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19790] <... futex resumed> )       = 0
+[pid 19699] <... futex resumed> )       = 1
+[pid 19790] futex(0x7f8c0402e828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19699] futex(0x7f8c1c013b54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c1c013b50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19790] <... futex resumed> )       = 0
+[pid 19788] <... futex resumed> )       = 0
+[pid 19790] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19788] futex(0x7f8c1c013b28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19790] <... futex resumed> )       = 1
+[pid 19708] <... futex resumed> )       = 0
+[pid 19699] <... futex resumed> )       = 1
+[pid 19790] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19699] futex(0x7f8c1c013b28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19790] <... futex resumed> )       = 0
+[pid 19788] <... futex resumed> )       = 0
+[pid 19790] open("httpperf/foo.html", O_RDWR|O_CREAT, 0666 <unfinished ...>
+[pid 19788] futex(0x7f8c1c013b28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19790] <... open resumed> )        = 47
+[pid 19788] <... futex resumed> )       = 0
+[pid 19790] futex(0x7f8c0402ed0c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19788] futex(0x7f8c28060854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28060850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19789] <... futex resumed> )       = 0
+[pid 19789] futex(0x7f8c28060828, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19788] <... futex resumed> )       = 1
+[pid 19788] futex(0x7f8c28060828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19789] <... futex resumed> )       = 0
+[pid 19789] futex(0x7f8c28060828, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19789] pread(44, "", 8105, 87)     = 0
+[pid 19789] futex(0x7f8c28060c3c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19788] <... futex resumed> )       = 1
+[pid 19788] pread(43, "", 8105, 87)     = 0
+[pid 19788] futex(0x7f8c1c013fec, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+[pid 19699] <... futex resumed> )       = 1
+[pid 19708] <... mmap resumed> )        = 0x7f8c20adf000
+[pid 19699] futex(0x7f8c28097854, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 71, {1336777360, 551153000}, ffffffff <unfinished ...>
+[pid 19708] clone(Process 19791 attached
+child_stack=0x7f8c20bdeff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c20bdf9d0, tls=0x7f8c20bdf700, child_tidptr=0x7f8c20bdf9d0) = 19791
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 69, NULL <unfinished ...>
+[pid 19791] set_robust_list(0x7f8c20bdf9e0, 0x18) = 0
+[pid 19791] gettid()                    = 19791
+[pid 19791] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19791] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19791] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19791] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19791] <... futex resumed> )       = 1
+[pid 19791] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] read(37, "GET / HTTP/1.1\r\nHost: localhost:"..., 1024) = 1024
+[pid 19791] <... futex resumed> )       = 1
+[pid 19791] sched_getaffinity(19791, 32, {1, 0, 0, 0}) = 32
+[pid 19791] sched_getaffinity(19791, 32, {1, 0, 0, 0}) = 32
+[pid 19791] mmap(0x7f8c20adf000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid 19706] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 19706] futex(0x7f8c2810b128, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19706] futex(0x7f8c2810b154, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336777359, 609835000}, ffffffff <unfinished ...>
+[pid 19791] <... mmap resumed> )        = 0x7f8c20adf000
+[pid 19791] mprotect(0x7f8c20adf000, 12288, PROT_NONE) = 0
+[pid 19791] open("httpperf/foo.html", O_RDWR|O_CREAT, 0666) = 48
+[pid 19791] open("httpperf/foo.html", O_RDWR|O_CREAT, 0666) = 49
+[pid 19791] futex(0x7f8c0403257c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19708] read(36, "GET / HTTP/1.1\r\nHost: localhost:"..., 1024) = 1024
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c209de000
+[pid 19708] clone(Process 19792 attached
+child_stack=0x7f8c20addff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c20ade9d0, tls=0x7f8c20ade700, child_tidptr=0x7f8c20ade9d0) = 19792
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 71, NULL <unfinished ...>
+[pid 19792] set_robust_list(0x7f8c20ade9e0, 0x18) = 0
+[pid 19792] gettid()                    = 19792
+[pid 19792] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19792] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19792] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19792] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19792] <... futex resumed> )       = 1
+[pid 19792] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19707] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 19707] futex(0x7f8c281d7f28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19707] futex(0x7f8c281d7f54, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336777359, 585463000}, ffffffff <unfinished ...>
+[pid 19708] futex(0x7f8c280fdd54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fdd50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19792] <... futex resumed> )       = 1
+[pid 19792] sched_getaffinity(19792, 32, {1, 0, 0, 0}) = 32
+[pid 19792] sched_getaffinity(19792, 32, {1, 0, 0, 0}) = 32
+[pid 19792] mmap(0x7f8c209de000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c209de000
+[pid 19792] mprotect(0x7f8c209de000, 12288, PROT_NONE) = 0
+[pid 19792] open("httpperf/foo.html", O_RDWR|O_CREAT, 0666 <unfinished ...>
+[pid 19704] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fdd28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c280fdd28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19704] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fdd28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19704] futex(0x7f8c280fba54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fba50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19703] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19704] <... futex resumed> )       = 0
+[pid 19703] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19704] futex(0x7f8c280fdd54, FUTEX_WAIT_PRIVATE, 49, NULL <unfinished ...>
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19703] futex(0x7f8c280fba54, FUTEX_WAIT_PRIVATE, 51, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] read(34, "GET / HTTP/1.1\r\nHost: localhost:"..., 1024) = 1024
+[pid 19792] <... open resumed> )        = 50
+[pid 19792] open("httpperf/foo.html", O_RDWR|O_CREAT, 0666) = 51
+[pid 19792] futex(0x7f8c0403423c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19708] futex(0x7f8c280fdd54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fdd50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19704] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fdd28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c280fdd28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19704] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fdd28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19704] futex(0x7f8c280fba54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fba50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19703] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19704] <... futex resumed> )       = 0
+[pid 19703] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19703] futex(0x7f8c280fba54, FUTEX_WAIT_PRIVATE, 53, NULL <unfinished ...>
+[pid 19704] futex(0x7f8c280fdd54, FUTEX_WAIT_PRIVATE, 51, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c280fba54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fba50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19703] <... futex resumed> )       = 0
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19703] <... futex resumed> )       = 0
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19703] futex(0x7f8c280fdd54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fdd50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19703] futex(0x7f8c280fba54, FUTEX_WAIT_PRIVATE, 55, NULL <unfinished ...>
+[pid 19704] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fdd28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19704] futex(0x7f8c280fdd54, FUTEX_WAIT_PRIVATE, 53, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c280fba54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fba50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19703] <... futex resumed> )       = 0
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19703] <... futex resumed> )       = 0
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19703] futex(0x7f8c280fdd54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fdd50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19704] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fdd28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19703] futex(0x7f8c280fdd28, FUTEX_WAKE_PRIVATE, 1) = 1
+[pid 19704] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fdd28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19704] futex(0x7f8c280fdd54, FUTEX_WAIT_PRIVATE, 55, NULL <unfinished ...>
+[pid 19703] futex(0x7f8c280fba54, FUTEX_WAIT_PRIVATE, 57, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c280fdd54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fdd50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19704] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fdd28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c280fdd28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19704] <... futex resumed> )       = 0
+[pid 19704] futex(0x7f8c280fdd28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19704] futex(0x7f8c280fba54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c280fba50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19703] <... futex resumed> )       = 0
+[pid 19703] futex(0x7f8c280fba28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19703] futex(0x7f8c280fba54, FUTEX_WAIT_PRIVATE, 59, NULL <unfinished ...>
+[pid 19704] futex(0x7f8c280fdd54, FUTEX_WAIT_PRIVATE, 57, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] epoll_ctl(25, EPOLL_CTL_DEL, 38, {0, {u32=38, u64=2409025544050966566}}) = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_DEL, 39, {0, {u32=39, u64=2409025544050966567}}) = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_DEL, 40, {0, {u32=40, u64=2409025544050966568}}) = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_DEL, 41, {0, {u32=41, u64=2409025544050966569}}) = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_DEL, 37, {0, {u32=37, u64=2409025544050966565}}) = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_DEL, 36, {0, {u32=36, u64=2409025544050966564}}) = 0
+[pid 19708] epoll_ctl(25, EPOLL_CTL_DEL, 34, {0, {u32=34, u64=2409025544050966562}}) = 0
+[pid 19708] epoll_wait(25, {{EPOLLIN, {u32=23, u64=23}}}, 8192, 10) = 1
+[pid 19708] read(23, "\1", 128)         = 1
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c208dd000
+[pid 19708] clone(Process 19793 attached
+child_stack=0x7f8c209dcff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c209dd9d0, tls=0x7f8c209dd700, child_tidptr=0x7f8c209dd9d0) = 19793
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 73, NULL <unfinished ...>
+[pid 19793] set_robust_list(0x7f8c209dd9e0, 0x18) = 0
+[pid 19793] gettid()                    = 19793
+[pid 19793] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19793] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19793] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19793] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19793] <... futex resumed> )       = 1
+[pid 19793] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c207dc000
+[pid 19708] clone(Process 19794 attached
+child_stack=0x7f8c208dbff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c208dc9d0, tls=0x7f8c208dc700, child_tidptr=0x7f8c208dc9d0) = 19794
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 75, NULL <unfinished ...>
+[pid 19793] <... futex resumed> )       = 1
+[pid 19793] sched_getaffinity(19793, 32, {1, 0, 0, 0}) = 32
+[pid 19793] sched_getaffinity(19793, 32, {1, 0, 0, 0}) = 32
+[pid 19793] mmap(0x7f8c208dd000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c208dd000
+[pid 19793] mprotect(0x7f8c208dd000, 12288, PROT_NONE) = 0
+[pid 19793] pread(45, "<html>\n<head>\n  <title>Some page"..., 8192, 0) = 87
+[pid 19793] futex(0x7f8c04036c54, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19707] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 19707] futex(0x7f8c281d7f28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19707] futex(0x7f8c281d7f54, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336777359, 605026000}, ffffffff <unfinished ...>
+[pid 19794] set_robust_list(0x7f8c208dc9e0, 0x18) = 0
+[pid 19794] gettid()                    = 19794
+[pid 19794] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19794] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19794] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19794] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19794] <... futex resumed> )       = 1
+[pid 19794] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] futex(0x7f8c04036c54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c04036c50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/jboss/netty/channel/DownstreamMessageEvent.class", 0x7f8c216e7c00) = -1 ENOENT (No such file or directory)
+[pid 19708] lseek(13, 162877, SEEK_SET) = 162877
+[pid 19708] read(13, "PK\3\4\n\0\0\10\10\0cG\233@N.\233Nn\3\0\0\347\7\0\0004\0\0\0", 30) = 30
+[pid 19708] lseek(13, 162959, SEEK_SET) = 162959
+[pid 19708] read(13, "\225T\353R\323@\24\376\26\n\t5 V\345\"*(*%\245\r*\242\202\202P\301[A\344\346"..., 878) = 878
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/jboss/netty/handler/stream/ChunkedInput.class", 0x7f8c216e7980) = -1 ENOENT (No such file or directory)
+[pid 19708] lseek(13, 673256, SEEK_SET) = 673256
+[pid 19708] read(13, "PK\3\4\n\0\0\10\10\0dG\233@\6\347_z\332\0\0\0K\1\0\0001\0\0\0", 30) = 30
+[pid 19708] lseek(13, 673335, SEEK_SET) = 673335
+[pid 19708] read(13, "e\216\301N\302@\20\206\377\301B\5Q!\370\20\20\0227\236=\32LH\214\34H8p[\332\221"..., 218) = 218
+[pid 19793] <... futex resumed> )       = 0
+[pid 19793] futex(0x7f8c04036c28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19793] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c206db000
+[pid 19793] clone(Process 19795 attached
+child_stack=0x7f8c207daff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c207db9d0, tls=0x7f8c207db700, child_tidptr=0x7f8c207db9d0) = 19795
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/jboss/netty/channel/socket/nio/SocketSendBufferPool$PooledSendBuffer.class",  <unfinished ...>
+[pid 19793] futex(0x7f8c04036c54, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19708] <... stat resumed> 0x7f8c216e7460) = -1 ENOENT (No such file or directory)
+[pid 19794] <... futex resumed> )       = 1
+[pid 19794] sched_getaffinity(19794, 32, {1, 0, 0, 0}) = 32
+[pid 19794] sched_getaffinity(19794, 32, {1, 0, 0, 0}) = 32
+[pid 19794] mmap(0x7f8c207dc000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c207dc000
+[pid 19794] mprotect(0x7f8c207dc000, 12288, PROT_NONE) = 0
+[pid 19794] pread(46,  <unfinished ...>
+[pid 19708] lseek(13, 318219, SEEK_SET) = 318219
+[pid 19708] read(13, "PK\3\4\n\0\0\10\10\0cG\233@\216\225\33\354L\4\0\0003\v\0\0N\0\0\0", 30) = 30
+[pid 19708] lseek(13, 318327, SEEK_SET) = 318327
+[pid 19708] read(13, "\305VIS\33G\24\376Z\333 i\f\n\330\4\34;\361\202m-`\221\325\v\204\00026\"\212"..., 1100) = 1100
+[pid 19708] write(33, "HTTP/1.1 200 OK\r\nContent-Type: t"..., 72 <unfinished ...>
+[pid 19794] <... pread resumed> "<html>\n<head>\n  <title>Some page"..., 8192, 0) = 87
+[pid 19794] futex(0x7f8c04038554, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19708] <... write resumed> )       = 72
+[pid 19707] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 19707] futex(0x7f8c281d7f28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19707] futex(0x7f8c281d7f54, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336777359, 625545000}, ffffffff <unfinished ...>
+[pid 19795] set_robust_list(0x7f8c207db9e0, 0x18) = 0
+[pid 19795] gettid()                    = 19795
+[pid 19795] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19795] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19795] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19795] futex(0x7f8c04036c54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c04036c50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19793] <... futex resumed> )       = 0
+[pid 19793] futex(0x7f8c04036c28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19795] <... futex resumed> )       = 1
+[pid 19795] futex(0x7f8c04036c28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19793] <... futex resumed> )       = 0
+[pid 19793] futex(0x7f8c04036c28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19793] futex(0x7f8c04038554, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c04038550, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19793] futex(0x7f8c040370ac, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19794] <... futex resumed> )       = 0
+[pid 19794] futex(0x7f8c04038528, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19794] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c205da000
+[pid 19794] clone(Process 19796 attached
+child_stack=0x7f8c206d9ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c206da9d0, tls=0x7f8c206da700, child_tidptr=0x7f8c206da9d0) = 19796
+[pid 19794] futex(0x7f8c04038554, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19795] <... futex resumed> )       = 1
+[pid 19795] sched_getaffinity(19795, 32, {1, 0, 0, 0}) = 32
+[pid 19795] sched_getaffinity(19795, 32, {1, 0, 0, 0}) = 32
+[pid 19795] mmap(0x7f8c206db000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c206db000
+[pid 19795] mprotect(0x7f8c206db000, 12288, PROT_NONE) = 0
+[pid 19795] futex(0x7f8c28097854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28097850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/jboss/netty/channel/DefaultWriteCompletionEvent.class", 0x7f8c216e74f0) = -1 ENOENT (No such file or directory)
+[pid 19708] lseek(13, 159971, SEEK_SET <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19795] <... futex resumed> )       = 1
+[pid 19795] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19699] futex(0x7f8c28097854, FUTEX_WAIT_PRIVATE, 73, NULL <unfinished ...>
+[pid 19795] <... futex resumed> )       = 1
+[pid 19795] futex(0x7f8c1c017b54, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19708] <... lseek resumed> )       = 159971
+[pid 19708] read(13, "PK\3\4\n\0\0\10\10\0eG\233@\221\372^wc\3\0\0\3\7\0\0009\0\0\0", 30) = 30
+[pid 19708] lseek(13, 160058, SEEK_SET) = 160058
+[pid 19708] read(13, "\235T[S\23I\24\376:\204\314$\16\202\361\202\270\212\203xIB4\22D]n\212\21\224\30\202"..., 867) = 867
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/jboss/netty/handler/codec/http/DefaultHttpChunk.class",  <unfinished ...>
+[pid 19796] set_robust_list(0x7f8c206da9e0, 0x18) = 0
+[pid 19796] gettid()                    = 19796
+[pid 19796] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19796] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19796] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19796] futex(0x7f8c04038554, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c04038550, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19794] <... futex resumed> )       = 0
+[pid 19794] futex(0x7f8c04038528, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19796] <... futex resumed> )       = 1
+[pid 19706] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 19706] futex(0x7f8c2810b128, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19706] futex(0x7f8c2810b154, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336777359, 661054000}, ffffffff <unfinished ...>
+[pid 19708] <... stat resumed> 0x7f8c216e7e00) = -1 ENOENT (No such file or directory)
+[pid 19796] futex(0x7f8c04038528, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19794] <... futex resumed> )       = 0
+[pid 19794] futex(0x7f8c04038528, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19794] futex(0x7f8c28097854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28097850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19794] <... futex resumed> )       = 1
+[pid 19794] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19699] mprotect(0x7f8c2e3ac000, 4096, PROT_READ) = 0
+[pid 19699] mprotect(0x7f8c2e3ac000, 4096, PROT_READ|PROT_WRITE) = 0
+[pid 19699] mprotect(0x7f8c2e3ad000, 4096, PROT_NONE) = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19794] <... futex resumed> )       = 1
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19794] futex(0x7f8c04038554, FUTEX_WAIT_PRIVATE, 5, NULL <unfinished ...>
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19796] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 77, NULL <unfinished ...>
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19796] sched_getaffinity(19796, 32,  <unfinished ...>
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19796] <... sched_getaffinity resumed> {1, 0, 0, 0}) = 32
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19796] sched_getaffinity(19796, 32,  <unfinished ...>
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19796] <... sched_getaffinity resumed> {1, 0, 0, 0}) = 32
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19796] mmap(0x7f8c205da000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19796] <... mmap resumed> )        = 0x7f8c205da000
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19796] mprotect(0x7f8c205da000, 12288, PROT_NONE <unfinished ...>
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19796] <... mprotect resumed> )    = 0
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19796] futex(0x7f8c28064b54, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19699] futex(0x7f8c04038554, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c04038550, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19794] <... futex resumed> )       = 0
+[pid 19794] futex(0x7f8c04038528, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19699] <... futex resumed> )       = 1
+[pid 19699] futex(0x7f8c04038528, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19794] <... futex resumed> )       = 0
+[pid 19794] futex(0x7f8c04038528, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19794] futex(0x7f8c04038554, FUTEX_WAIT_PRIVATE, 7, NULL <unfinished ...>
+[pid 19699] <... futex resumed> )       = 1
+[pid 19699] mprotect(0x7f8c2e3ad000, 4096, PROT_READ) = 0
+[pid 19699] futex(0x7f8c04038554, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c04038550, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19794] <... futex resumed> )       = 0
+[pid 19794] futex(0x7f8c04038528, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19699] <... futex resumed> )       = 1
+[pid 19699] futex(0x7f8c04038528, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19794] <... futex resumed> )       = 0
+[pid 19794] futex(0x7f8c04038528, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19794] futex(0x7f8c28064b54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28064b50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19796] <... futex resumed> )       = 0
+[pid 19794] <... futex resumed> )       = 1
+[pid 19796] futex(0x7f8c28064b28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19794] futex(0x7f8c0403897c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19796] <... futex resumed> )       = 0
+[pid 19699] <... futex resumed> )       = 1
+[pid 19796] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19699] futex(0x7f8c1c017b54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c1c017b50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19796] <... futex resumed> )       = 1
+[pid 19795] <... futex resumed> )       = 0
+[pid 19796] futex(0x7f8c28064b54, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19795] futex(0x7f8c1c017b28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19699] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19699] futex(0x7f8c1c017b28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19795] <... futex resumed> )       = 0
+[pid 19795] futex(0x7f8c1c017b28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19795] pread(45, "", 8105, 87)     = 0
+[pid 19795] write(24, "\1", 1)          = 1
+[pid 19795] futex(0x7f8c1c017f3c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19699] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 79, NULL <unfinished ...>
+[pid 19699] mprotect(0x7f8c2e3ac000, 4096, PROT_READ) = 0
+[pid 19699] mprotect(0x7f8c2e3ac000, 4096, PROT_READ|PROT_WRITE) = 0
+[pid 19699] mprotect(0x7f8c2e3ad000, 4096, PROT_NONE) = 0
+[pid 19699] mprotect(0x7f8c2e3ad000, 4096, PROT_READ) = 0
+[pid 19699] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19699] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19699] futex(0x7f8c28064b54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28064b50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19796] <... futex resumed> )       = 0
+[pid 19708] <... futex resumed> )       = 0
+[pid 19699] <... futex resumed> )       = 1
+[pid 19796] futex(0x7f8c28064b28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] lseek(13, 406278, SEEK_SET <unfinished ...>
+[pid 19699] futex(0x7f8c28097854, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 75, {1336777360, 620922000}, ffffffff <unfinished ...>
+[pid 19796] <... futex resumed> )       = 0
+[pid 19708] <... lseek resumed> )       = 406278
+[pid 19796] pread(46,  <unfinished ...>
+[pid 19708] read(13,  <unfinished ...>
+[pid 19796] <... pread resumed> "", 8105, 87) = 0
+[pid 19708] <... read resumed> "PK\3\4\n\0\0\10\10\0fG\233@o\361D2\27\2\0\0\10\4\0\0009\0\0\0", 30) = 30
+[pid 19796] futex(0x7f8c28064f5c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19708] lseek(13, 406365, SEEK_SET) = 406365
+[pid 19708] read(13, "\235RMo\323@\20}\233\270q\352\272m\32H\371(\224~\6\333IkU\210\23\210\3\201\212C"..., 535) = 535
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/jboss/netty/buffer/TruncatedChannelBuffer.class", 0x7f8c216e77f0) = -1 ENOENT (No such file or directory)
+[pid 19708] lseek(13, 108857, SEEK_SET) = 108857
+[pid 19708] read(13, "PK\3\4\n\0\0\10\10\0eG\233@\232)\2468\200\10\0\0\4\27\0\0003\0\0\0", 30) = 30
+[pid 19708] lseek(13, 108938, SEEK_SET) = 108938
+[pid 19708] read(13, "\225\227\217W\34\325\25\307\277\263?XX\2461@\26+K\"\32\23\227\205d\r\215\265\6\177\24\""..., 2176) = 2176
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/jboss/netty/buffer/WrappedChannelBuffer.class", 0x7f8c216e5a10) = -1 ENOENT (No such file or directory)
+[pid 19708] lseek(13, 111114, SEEK_SET) = 111114
+[pid 19708] read(13, "PK\3\4\n\0\0\10\10\0eG\233@\22N\2016\233\0\0\0\370\0\0\0001\0\0\0", 30) = 30
+[pid 19708] lseek(13, 111193, SEEK_SET) = 111193
+[pid 19708] read(13, ";\365o\327>\6\6\6C\6nv\6\16v\6Nv\6.F\6\266\322\274\362\242\304\2F\6\r"..., 155) = 155
+[pid 19707] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 19707] futex(0x7f8c281d7f28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19707] futex(0x7f8c281d7f54, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336777359, 645754000}, ffffffff <unfinished ...>
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/jboss/netty/buffer/CompositeChannelBuffer.class", 0x7f8c216e7770) = -1 ENOENT (No such file or directory)
+[pid 19708] lseek(13, 86466, SEEK_SET)  = 86466
+[pid 19708] read(13, "PK\3\4\n\0\0\10\10\0fG\233@\232\320.\303\4\31\0\0\3507\0\0003\0\0\0", 30) = 30
+[pid 19708] lseek(13, 86547, SEEK_SET)  = 86547
+[pid 19708] read(13, "\305Z\tx\224\325\271~\317?k&\3\204e\200d&\32\224e\262\220(K\324@@v\3\201\310"..., 6404) = 6404
+[pid 19708] write(33, "57\r\n<html>\n<head>\n  <title>Some "..., 93) = 93
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c204d9000
+[pid 19708] clone(Process 19797 attached
+child_stack=0x7f8c205d8ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c205d99d0, tls=0x7f8c205d9700, child_tidptr=0x7f8c205d99d0) = 19797
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 81, NULL <unfinished ...>
+[pid 19797] set_robust_list(0x7f8c205d99e0, 0x18) = 0
+[pid 19797] gettid()                    = 19797
+[pid 19797] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19797] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19797] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19797] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19797] <... futex resumed> )       = 1
+[pid 19797] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c203d8000
+[pid 19708] clone(Process 19798 attached
+child_stack=0x7f8c204d7ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c204d89d0, tls=0x7f8c204d8700, child_tidptr=0x7f8c204d89d0) = 19798
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 83, NULL <unfinished ...>
+[pid 19797] <... futex resumed> )       = 1
+[pid 19797] sched_getaffinity(19797, 32, {1, 0, 0, 0}) = 32
+[pid 19797] sched_getaffinity(19797, 32, {1, 0, 0, 0}) = 32
+[pid 19797] mmap(0x7f8c204d9000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c204d9000
+[pid 19797] mprotect(0x7f8c204d9000, 12288, PROT_NONE) = 0
+[pid 19797] pread(42, "", 8192, 87)     = 0
+[pid 19797] futex(0x7f8c04038eec, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19798] set_robust_list(0x7f8c204d89e0, 0x18) = 0
+[pid 19798] gettid()                    = 19798
+[pid 19798] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19798] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19798] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19798] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19798] <... futex resumed> )       = 1
+[pid 19798] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] write(32, "HTTP/1.1 200 OK\r\nContent-Type: t"..., 72) = 72
+[pid 19708] write(32, "57\r\n<html>\n<head>\n  <title>Some "..., 93) = 93
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c202d7000
+[pid 19708] clone(Process 19799 attached
+child_stack=0x7f8c203d6ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c203d79d0, tls=0x7f8c203d7700, child_tidptr=0x7f8c203d79d0) = 19799
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 85, NULL <unfinished ...>
+[pid 19798] <... futex resumed> )       = 1
+[pid 19798] sched_getaffinity(19798, 32, {1, 0, 0, 0}) = 32
+[pid 19798] sched_getaffinity(19798, 32, {1, 0, 0, 0}) = 32
+[pid 19798] mmap(0x7f8c203d8000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c203d8000
+[pid 19798] mprotect(0x7f8c203d8000, 12288, PROT_NONE) = 0
+[pid 19798] pread(47, "<html>\n<head>\n  <title>Some page"..., 8192, 0) = 87
+[pid 19798] futex(0x7f8c0403ab54, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19799] set_robust_list(0x7f8c203d79e0, 0x18) = 0
+[pid 19799] gettid()                    = 19799
+[pid 19799] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19799] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19799] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19799] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19799] <... futex resumed> )       = 1
+[pid 19799] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] futex(0x7f8c0403ab54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c0403ab50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19708] write(31, "HTTP/1.1 200 OK\r\nContent-Type: t"..., 72) = 72
+[pid 19708] write(31, "57\r\n<html>\n<head>\n  <title>Some "..., 93) = 93
+[pid 19708] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f8c201d6000
+[pid 19708] clone(Process 19800 attached
+child_stack=0x7f8c202d5ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c202d69d0, tls=0x7f8c202d6700, child_tidptr=0x7f8c202d69d0) = 19800
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 87, NULL <unfinished ...>
+[pid 19798] <... futex resumed> )       = 0
+[pid 19798] futex(0x7f8c0403ab28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19798] futex(0x7f8c0403ab54, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19799] <... futex resumed> )       = 1
+[pid 19799] sched_getaffinity(19799, 32, {1, 0, 0, 0}) = 32
+[pid 19799] sched_getaffinity(19799, 32, {1, 0, 0, 0}) = 32
+[pid 19799] mmap(0x7f8c202d7000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c202d7000
+[pid 19799] mprotect(0x7f8c202d7000, 12288, PROT_NONE) = 0
+[pid 19799] pread(44, "", 8192, 87)     = 0
+[pid 19799] futex(0x7f8c04041cac, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19800] set_robust_list(0x7f8c202d69e0, 0x18) = 0
+[pid 19800] gettid()                    = 19800
+[pid 19800] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19800] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19800] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19800] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19800] <... futex resumed> )       = 1
+[pid 19800] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] futex(0x7f8c0403ab54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c0403ab50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19708] futex(0x7f8c040ef2ac, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c040ef2a8, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19782] <... futex resumed> )       = 0
+[pid 19708] <... futex resumed> )       = 1
+[pid 19782] futex(0x7f8c040ef280, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] futex(0x7f8c040ef280, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19782] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19708] <... futex resumed> )       = 0
+[pid 19782] futex(0x7f8c040ef280, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] write(38, "HTTP/1.1 200 OK\r\nContent-Type: t"..., 72 <unfinished ...>
+[pid 19782] <... futex resumed> )       = 0
+[pid 19782] futex(0x7f8c0402bd5c, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c0402bd58, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19786] <... futex resumed> )       = 0
+[pid 19782] <... futex resumed> )       = 1
+[pid 19786] futex(0x7f8c0402bd30, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19782] futex(0x7f8c0402bd30, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19786] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19782] <... futex resumed> )       = 0
+[pid 19786] futex(0x7f8c0402bd30, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19782] pread(48,  <unfinished ...>
+[pid 19786] <... futex resumed> )       = 0
+[pid 19782] <... pread resumed> "<html>\n<head>\n  <title>Some page"..., 8192, 0) = 87
+[pid 19708] <... write resumed> )       = 72
+[pid 19786] futex(0x7f8c040f8b5c, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c040f8b58, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19782] pread(50,  <unfinished ...>
+[pid 19708] write(38, "57\r\n<html>\n<head>\n  <title>Some "..., 93 <unfinished ...>
+[pid 19786] <... futex resumed> )       = 1
+[pid 19783] <... futex resumed> )       = 0
+[pid 19782] <... pread resumed> "<html>\n<head>\n  <title>Some page"..., 8192, 0) = 87
+[pid 19786] futex(0x7f8c040f8b30, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19783] futex(0x7f8c040f8b30, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19782] pread(51,  <unfinished ...>
+[pid 19786] <... futex resumed> )       = 0
+[pid 19783] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19782] <... pread resumed> "<html>\n<head>\n  <title>Some page"..., 8192, 0) = 87
+[pid 19786] pread(49,  <unfinished ...>
+[pid 19783] futex(0x7f8c040f8b30, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19782] pread(48,  <unfinished ...>
+[pid 19708] <... write resumed> )       = 93
+[pid 19786] <... pread resumed> "<html>\n<head>\n  <title>Some page"..., 8192, 0) = 87
+[pid 19783] <... futex resumed> )       = 0
+[pid 19782] <... pread resumed> "", 8105, 87) = 0
+[pid 19708] write(39, "HTTP/1.1 200 OK\r\nContent-Type: t"..., 72 <unfinished ...>
+[pid 19707] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 19786] futex(0x7f8c28097854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28097850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19783] futex(0x7f8c040d3f0c, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c040d3f08, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19782] pread(45,  <unfinished ...>
+[pid 19707] futex(0x7f8c281d7f28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19786] <... futex resumed> )       = 1
+[pid 19784] <... futex resumed> )       = 0
+[pid 19783] <... futex resumed> )       = 1
+[pid 19782] <... pread resumed> "", 8192, 87) = 0
+[pid 19707] <... futex resumed> )       = 0
+[pid 19699] <... futex resumed> )       = 0
+[pid 19786] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19784] futex(0x7f8c040d3ee0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19783] futex(0x7f8c040d3ee0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19782] futex(0x7f8c040eee54, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19708] <... write resumed> )       = 72
+[pid 19707] futex(0x7f8c281d7f54, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336777359, 665985000}, ffffffff <unfinished ...>
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19786] <... futex resumed> )       = 0
+[pid 19784] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19783] <... futex resumed> )       = 0
+[pid 19708] write(39, "57\r\n<html>\n<head>\n  <title>Some "..., 93 <unfinished ...>
+[pid 19699] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19784] futex(0x7f8c040d3ee0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19786] futex(0x7f8c0402b954, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19784] <... futex resumed> )       = 0
+[pid 19784] futex(0x7f8c1400954c, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c14009548, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19787] <... futex resumed> )       = 0
+[pid 19787] futex(0x7f8c14009520, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19784] <... futex resumed> )       = 1
+[pid 19784] futex(0x7f8c14009520, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19787] <... futex resumed> )       = 0
+[pid 19787] futex(0x7f8c14009520, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19787] futex(0x7f8c0402a4ac, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c0402a4a8, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19787] futex(0x7f8c1400954c, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19785] <... futex resumed> )       = 0
+[pid 19785] futex(0x7f8c0402a480, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19785] futex(0x7f8c0402ed0c, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c0402ed08, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19790] <... futex resumed> )       = 0
+[pid 19790] futex(0x7f8c0402ece0, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19785] <... futex resumed> )       = 1
+[pid 19785] futex(0x7f8c0402ece0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19790] <... futex resumed> )       = 0
+[pid 19790] futex(0x7f8c0402ece0, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19790] futex(0x7f8c28060c3c, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28060c38, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19790] futex(0x7f8c0402ed0c, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19789] <... futex resumed> )       = 0
+[pid 19789] futex(0x7f8c28060c10, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19798] <... futex resumed> )       = 0
+[pid 19789] futex(0x7f8c1c013fec, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c1c013fe8, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19798] futex(0x7f8c0403ab28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19789] <... futex resumed> )       = 1
+[pid 19798] <... futex resumed> )       = 0
+[pid 19789] futex(0x7f8c28060c3c, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19798] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0 <unfinished ...>
+[pid 19788] <... futex resumed> )       = 0
+[pid 19798] <... mmap resumed> )        = 0x7f8c200d5000
+[pid 19788] futex(0x7f8c1c013fc0, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19798] clone( <unfinished ...>
+[pid 19788] <... futex resumed> )       = 0
+Process 19801 attached
+[pid 19798] <... clone resumed> child_stack=0x7f8c201d4ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f8c201d59d0, tls=0x7f8c201d5700, child_tidptr=0x7f8c201d59d0) = 19801
+[pid 19788] futex(0x7f8c1c013fec, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19798] futex(0x7f8c0403ab54, FUTEX_WAIT_PRIVATE, 5, NULL <unfinished ...>
+[pid 19785] <... futex resumed> )       = 1
+[pid 19785] futex(0x7f8c0402a4ac, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19784] <... futex resumed> )       = 1
+[pid 19784] futex(0x7f8c040d3f0c, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19783] futex(0x7f8c040f8754, FUTEX_WAIT_PRIVATE, 9, NULL <unfinished ...>
+[pid 19708] <... write resumed> )       = 93
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] futex(0x7f8c2829db54, FUTEX_WAIT_PRIVATE, 89, NULL <unfinished ...>
+[pid 19699] <... futex resumed> )       = 0
+[pid 19699] futex(0x7f8c28097854, FUTEX_WAIT_PRIVATE, 77, NULL <unfinished ...>
+[pid 19800] <... futex resumed> )       = 1
+[pid 19800] sched_getaffinity(19800, 32, {1, 0, 0, 0}) = 32
+[pid 19800] sched_getaffinity(19800, 32, {1, 0, 0, 0}) = 32
+[pid 19800] mmap(0x7f8c201d6000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f8c201d6000
+[pid 19800] mprotect(0x7f8c201d6000, 12288, PROT_NONE) = 0
+[pid 19800] pread(43, "", 8192, 87)     = 0
+[pid 19800] pread(46, "", 8192, 87)     = 0
+[pid 19800] futex(0x7f8c04043d2c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19801] set_robust_list(0x7f8c201d59e0, 0x18) = 0
+[pid 19801] gettid()                    = 19801
+[pid 19801] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 19801] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 19801] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 19801] futex(0x7f8c0403ab54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c0403ab50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19798] <... futex resumed> )       = 0
+[pid 19798] futex(0x7f8c0403ab28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19801] <... futex resumed> )       = 1
+[pid 19801] futex(0x7f8c0403ab28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19798] <... futex resumed> )       = 0
+[pid 19798] futex(0x7f8c0403ab28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19798] futex(0x7f8c28097854, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c28097850, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+[pid 19699] <... futex resumed> )       = 0
+[pid 19798] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19798] <... futex resumed> )       = 0
+[pid 19699] <... futex resumed> )       = -1 EAGAIN (Resource temporarily unavailable)
+[pid 19798] futex(0x7f8c0403af2c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19699] futex(0x7f8c28097828, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19699] mprotect(0x7f8c2e3ac000, 4096, PROT_READ) = 0
+[pid 19699] mprotect(0x7f8c2e3ac000, 4096, PROT_READ|PROT_WRITE) = 0
+[pid 19699] mprotect(0x7f8c2e3ad000, 4096, PROT_NONE) = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19699] sched_yield()               = 0
+[pid 19801] <... futex resumed> )       = 1
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19801] sched_getaffinity(19801, 32,  <unfinished ...>
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19801] <... sched_getaffinity resumed> {1, 0, 0, 0}) = 32
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19801] sched_getaffinity(19801, 32,  <unfinished ...>
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19801] <... sched_getaffinity resumed> {1, 0, 0, 0}) = 32
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19801] mmap(0x7f8c200d5000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19801] <... mmap resumed> )        = 0x7f8c200d5000
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19801] mprotect(0x7f8c200d5000, 12288, PROT_NONE <unfinished ...>
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19801] <... mprotect resumed> )    = 0
+[pid 19699] sched_yield( <unfinished ...>
+[pid 19801] futex(0x7f8c10047654, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 19699] <... sched_yield resumed> ) = 0
+[pid 19699] mprotect(0x7f8c2e3ad000, 4096, PROT_READ) = 0
+[pid 19699] futex(0x7f8c2829db54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c2829db50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19699] <... futex resumed> )       = 1
+[pid 19699] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] <... futex resumed> )       = 0
+[pid 19708] futex(0x7f8c2829db28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19708] futex(0x7f8c10047654, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c10047650, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19801] <... futex resumed> )       = 0
+[pid 19708] <... futex resumed> )       = 1
+[pid 19801] futex(0x7f8c10047628, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19708] futex(0x7f8c0403257c, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f8c04032578, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 19801] <... futex resumed> )       = 0
+[pid 19791] <... futex resumed> )       = 0
+[pid 19801] futex(0x7f8c10047654, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19791] futex(0x7f8c04032550, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] futex(0x7f8c04032550, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 19791] <... futex resumed> )       = 0
+[pid 19791] futex(0x7f8c04032550, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 19791] futex(0x7f8c0403257c, FUTEX_WAIT_PRIVATE, 3, NULL <unfinished ...>
+[pid 19708] <... futex resumed> )       = 1
+[pid 19708] dup2(35, 42)                = 42
+[pid 19708] close(42)                   = 0
+[pid 19708] write(33, "0\r\n\r\n", 5)   = 5
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/vertx/java/core/http/impl/ServerConnection$1.class", 0x7f8c216e7e10) = -1 ENOENT (No such file or directory)
+[pid 19708] lseek(11, 365520, SEEK_SET) = 365520
+[pid 19708] read(11, "PK\3\4\n\0\0\10\10\0\367m\253@IZ\217r\222\2\0\0x\5\0\0006\0\0\0", 30) = 30
+[pid 19708] lseek(11, 365604, SEEK_SET) = 365604
+[pid 19708] read(11, "\235TkO\23A\24=C++\355\"\345\345\3_\5+\366\201l_<\344\241h\255\321\244`L"..., 658) = 658
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/vertx/java/core/SimpleHandler.class", 0x7f8c216e60e0) = -1 ENOENT (No such file or directory)
+[pid 19708] lseek(11, 187879, SEEK_SET) = 187879
+[pid 19708] read(11, "PK\3\4\n\0\0\10\10\0\366m\253@\265\330+\375z\1\0\0\335\2\0\0'\0\0\0", 30) = 30
+[pid 19708] lseek(11, 187948, SEEK_SET) = 187948
+[pid 19708] read(11, "\205QMO\302@\20}S\n\265\265*\212\342\7~\21/~$\326\304#JBL\214\207F\17\30"..., 378) = 378
+[pid 19708] stat("/home/bkelly/hmm/vert.x-1.0.final/conf/org/vertx/java/core/impl/DefaultVertx$1.class", 0x7f8c216e7db0) = -1 ENOENT (No such file or directory)
+[pid 19708] lseek(11, 423872, SEEK_SET) = 423872
+[pid 19708] read(11, "PK\3\4\n\0\0\10\10\0\370m\253@\223\275\1:\272\1\0\0d\3\0\0-\0\0\0", 30) = 30
+[pid 19708] lseek(11, 423947, SEEK_SET) = 423947
+[pid 19708] read(11, "\215R[o\22A\24\376fAV\330U@m\275\324**XX\33\327\246OF\343\v^\223\325&"..., 442) = 442
+[pid 19708] dup2(35, 44)                = 44
+[pid 19708] close(44)                   = 0

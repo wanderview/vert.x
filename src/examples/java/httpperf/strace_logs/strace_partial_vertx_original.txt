@@ -1,0 +1,56 @@
+[pid 17885] stat("httpperf/foo.html",  <unfinished ...>
+[pid 17839] futex(0x7f1bd00fdd54, FUTEX_WAIT_PRIVATE, 33, NULL <unfinished ...>
+[pid 17885] <... stat resumed> {st_mode=S_IFREG|0664, st_size=87, ...}) = 0
+[pid 17838] <... futex resumed> )       = 1
+[pid 17885] open("httpperf/foo.html", O_RDONLY <unfinished ...>
+[pid 17838] futex(0x7f1bd00fba54, FUTEX_WAIT_PRIVATE, 35, NULL <unfinished ...>
+[pid 17885] <... open resumed> )        = 42
+[pid 17834] <... futex resumed> )       = 1
+[pid 17885] read(42,  <unfinished ...>
+[pid 17834] futex(0x7f1bd0097854, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 27, {1336774166, 735992000}, ffffffff <unfinished ...>
+[pid 17885] <... read resumed> "<html>\n<head>\n  <title>Some page"..., 87) = 87
+[pid 17885] read(42, "", 87)            = 0
+[pid 17885] dup2(39, 42)                = 42
+[pid 17885] close(42)                   = 0
+[pid 17885] stat("httpperf/foo.html", {st_mode=S_IFREG|0664, st_size=87, ...}) = 0
+[pid 17885] open("httpperf/foo.html", O_RDONLY) = 42
+[pid 17885] read(42,  <unfinished ...>
+[pid 17842] <... futex resumed> )       = -1 ETIMEDOUT (Connection timed out)
+[pid 17885] <... read resumed> "<html>\n<head>\n  <title>Some page"..., 87) = 87
+[pid 17842] futex(0x7f1bd01ca828, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 17885] read(42,  <unfinished ...>
+[pid 17842] <... futex resumed> )       = 0
+[pid 17885] <... read resumed> "", 87)  = 0
+[pid 17842] futex(0x7f1bd01ca854, FUTEX_WAIT_BITSET_PRIVATE|FUTEX_CLOCK_REALTIME, 1, {1336774165, 756180000}, ffffffff <unfinished ...>
+[pid 17885] dup2(39, 42)                = 42
+[pid 17885] close(42)                   = 0
+[pid 17885] futex(0x7f1bb4071dfc, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+[pid 17843] read(34, "GET / HTTP/1.1\r\nHost: localhost:"..., 1024) = 1024
+[pid 17843] mmap(NULL, 1052672, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0x7f1bbde85000
+[pid 17843] clone(Process 17886 attached
+child_stack=0x7f1bbdf84ff0, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tidptr=0x7f1bbdf859d0, tls=0x7f1bbdf85700, child_tidptr=0x7f1bbdf859d0) = 17886
+[pid 17843] futex(0x7f1bd0289c54, FUTEX_WAIT_PRIVATE, 55, NULL <unfinished ...>
+[pid 17886] set_robust_list(0x7f1bbdf859e0, 0x18) = 0
+[pid 17886] gettid()                    = 17886
+[pid 17886] rt_sigprocmask(SIG_BLOCK, NULL, [QUIT], 8) = 0
+[pid 17886] rt_sigprocmask(SIG_UNBLOCK, [HUP INT ILL BUS FPE SEGV USR2 TERM], NULL, 8) = 0
+[pid 17886] rt_sigprocmask(SIG_BLOCK, [QUIT], NULL, 8) = 0
+[pid 17886] futex(0x7f1bd0289c54, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x7f1bd0289c50, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1} <unfinished ...>
+[pid 17843] <... futex resumed> )       = 0
+[pid 17843] futex(0x7f1bd0289c28, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+[pid 17886] <... futex resumed> )       = 1
+[pid 17886] futex(0x7f1bd0289c28, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+[pid 17843] <... futex resumed> )       = 0
+[pid 17843] futex(0x7f1bd0289c28, FUTEX_WAKE_PRIVATE, 1) = 0
+[pid 17843] read(32,  <unfinished ...>
+[pid 17886] <... futex resumed> )       = 1
+[pid 17886] sched_getaffinity(17886, 32, {1, 0, 0, 0}) = 32
+[pid 17886] sched_getaffinity(17886, 32, {1, 0, 0, 0}) = 32
+[pid 17886] mmap(0x7f1bbde85000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1bbde85000
+[pid 17886] mprotect(0x7f1bbde85000, 12288, PROT_NONE) = 0
+[pid 17886] stat("httpperf/foo.html", {st_mode=S_IFREG|0664, st_size=87, ...}) = 0
+[pid 17886] open("httpperf/foo.html", O_RDONLY) = 42
+[pid 17886] read(42, "<html>\n<head>\n  <title>Some page"..., 87) = 87
+[pid 17886] read(42, "", 87)            = 0
+[pid 17886] dup2(39, 42)                = 42
+[pid 17886] close(42)                   = 0
