@@ -32,8 +32,6 @@ public class PerfClient extends Verticle implements Handler<HttpClientResponse> 
 
   private long start;
 
-  private int count = 0;
-
   // This determines the degree of pipelining
   private static final int CREDITS_BATCH = 2000;
 
@@ -49,7 +47,9 @@ public class PerfClient extends Verticle implements Handler<HttpClientResponse> 
   private static final int NUM_DELTAS = 10000;
   private final long[] deltas = new long[NUM_DELTAS];
   private int nextDelta = 0;
-  boolean deltasFull = false;
+  private int batchCount = 0;
+
+  private long lastBatchMs = System.currentTimeMillis();
 
   public void handle(HttpClientResponse response) {
     if (response.statusCode != 200) {
@@ -65,39 +65,36 @@ public class PerfClient extends Verticle implements Handler<HttpClientResponse> 
         nextDelta += 1;
         if(nextDelta >= NUM_DELTAS) {
           nextDelta = 0;
-          deltasFull = true;
-        }
+          batchCount += 1;
 
-        count++;
-        if (count % 2000 == 0) {
-          eb.send("rate-counter", count);
-
-          if(deltasFull) {
-            long min = Long.MAX_VALUE;
-            long max = Long.MIN_VALUE;
-            double sum = 0;
-            for(long d : deltas) {
-              sum += d;
-              min = Math.min(min, d);
-              max = Math.max(max, d);
-            }
-            double mean = sum / (double)NUM_DELTAS;
-
-            double sumsq_diff = 0;
-            for(long d : deltas) {
-              double diff = (double)d - mean;
-              sumsq_diff += diff*diff;
-            }
-            double stdev = Math.sqrt(sumsq_diff / (double)NUM_DELTAS);
-
-            eb.send("delta-min", min);
-            eb.send("delta-max", max);
-            eb.send("delta-avg", mean);
-            eb.send("delta-stdev", stdev);
+          long min = Long.MAX_VALUE;
+          long max = Long.MIN_VALUE;
+          double sum = 0;
+          for(long d : deltas) {
+            sum += d;
+            min = Math.min(min, d);
+            max = Math.max(max, d);
           }
+          double mean = sum / (double)NUM_DELTAS;
 
-          count = 0;
+          double sumsq_diff = 0;
+          for(long d : deltas) {
+            double diff = (double)d - mean;
+            sumsq_diff += diff*diff;
+          }
+          double stdev = Math.sqrt(sumsq_diff / (double)NUM_DELTAS);
+
+          double rate = (double)NUM_DELTAS * 1000.0 / (double)(now - lastBatchMs);
+          eb.send("batch-count", batchCount);
+          eb.send("rate", rate);
+          eb.send("delta-min", min);
+          eb.send("delta-max", max);
+          eb.send("delta-avg", mean);
+          eb.send("delta-stdev", stdev);
+
+          lastBatchMs = System.currentTimeMillis();
         }
+
         requestCredits++;
         makeRequest();
       }
@@ -106,7 +103,7 @@ public class PerfClient extends Verticle implements Handler<HttpClientResponse> 
 
   public void start() {
     eb = vertx.eventBus();
-    client = vertx.createHttpClient().setPort(8080).setHost("localhost").setMaxPoolSize(MAX_CONNS);
+    client = vertx.createHttpClient().setPort(8080).setHost("10.112.1.245").setMaxPoolSize(MAX_CONNS);
     makeRequest();
   }
 

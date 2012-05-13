@@ -20,7 +20,7 @@ import org.vertx.java.core.Handler;
 import org.vertx.java.core.eventbus.Message;
 import org.vertx.java.deploy.Verticle;
 
-public class RateCounter extends Verticle implements Handler<Message<Integer>> {
+public class RateCounter extends Verticle implements Handler<Message<Double>> {
 
   private long last;
 
@@ -30,21 +30,24 @@ public class RateCounter extends Verticle implements Handler<Message<Integer>> {
 
   private long totCount;
 
+  private double rate = -1;
   private long minDeltaMs = -1;
   private long maxDeltaMs = -1;
   private double avgDeltaMs = -1;
   private double stdevDeltaMs = -1;
+  private int batchCount = -1;
 
-  public void handle(Message<Integer> msg) {
-    if (last == 0) {
-      last = start = System.currentTimeMillis();
-    }
-    count += msg.body;
-    totCount += msg.body;
+  public void handle(Message<Double> msg) {
+    rate = msg.body;
   }
 
   public void start() {
-    vertx.eventBus().registerHandler("rate-counter", this);
+    vertx.eventBus().registerHandler("rate", this);
+    vertx.eventBus().registerHandler("batch-count", new Handler<Message<Integer>>() {
+      public void handle(Message<Integer> msg) {
+        batchCount = msg.body;
+      }
+    });
     vertx.eventBus().registerHandler("delta-min", new Handler<Message<Long>>() {
       public void handle(Message<Long> msg) {
         minDeltaMs = msg.body;
@@ -63,8 +66,11 @@ public class RateCounter extends Verticle implements Handler<Message<Integer>> {
     vertx.eventBus().registerHandler("delta-stdev", new Handler<Message<Double>>() {
       public void handle(Message<Double> msg) {
         stdevDeltaMs = msg.body;
+        System.out.println(batchCount + "," + rate + "," + minDeltaMs + "," +
+          maxDeltaMs + "," + avgDeltaMs + "," + stdevDeltaMs);
       }
     });
+/*
     vertx.setPeriodic(3000, new Handler<Long>() {
       public void handle(Long id) {
         if (last != 0) {
@@ -79,5 +85,6 @@ public class RateCounter extends Verticle implements Handler<Message<Integer>> {
         }
       }
     });
+*/
   }
 }
