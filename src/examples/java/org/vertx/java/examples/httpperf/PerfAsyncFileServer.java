@@ -53,6 +53,6 @@ public class PerfAsyncFileServer extends Verticle {
           }
         });
       }
-    }).listen(8080, "localhost");
+    }).listen(8080, "10.112.1.245");
   }
 }
